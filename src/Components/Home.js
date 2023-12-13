@@ -5,7 +5,7 @@ export default function Home() {
   const fullText = "I learn. I think. I create.";
   const typingSpeed = 50; // Adjust typing speed (in milliseconds)
   const nameStyle = {
-    fontFamily: 'Snell Roundhand, cursive',
+    fontFamily: '',
     fontSize: '4rem',
   };
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div className='max-h-screen flex justify-center items-center flex-col' style={{ marginTop: '140px' }}>
-      <p className='text-6xl font-bold' style={nameStyle}>
+      <p className='text-6xl font-bold'>
         Aditya Muzumdar
       </p>
       <p className='mt-2 text-base'>

@@ -12,6 +12,12 @@ export default function Header() {
                             am
             </Link>
             <Link
+                            to="/about"
+                            className="text-base font-semibold"
+                        >
+                            about
+            </Link>
+            <Link
                             to="/projects"
                             className="text-base font-semibold"
                         >
@@ -24,12 +30,7 @@ export default function Header() {
                             writing
             </Link>
 
-                        <Link
-                            to="/contact"
-                            className="text-base font-semibold"
-                        >
-                            contact
-                        </Link>
+                        
             
             </nav>
         </header>
