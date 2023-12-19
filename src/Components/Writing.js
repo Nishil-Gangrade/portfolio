@@ -13,8 +13,9 @@ export default function Writing() {
                         <p className="mt-2 font-serif text-black/70 text-base">Writing about the city I love : Mumbai</p>
                     </div>
                 </Link>
-
+                
                 </section>
+                
             </div>
         </div>
     );
