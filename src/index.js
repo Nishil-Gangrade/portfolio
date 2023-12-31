@@ -8,6 +8,8 @@ import Writing from './Components/Writing';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import W1 from './Components/Writing/W1';
+import W2 from './Components/Writing/W2';
+
 import About from './Components/About';
 const router=createBrowserRouter([
   {
@@ -39,8 +41,11 @@ const router=createBrowserRouter([
       {
         path: "/writing/w1",
         element: <W1/>
+      },
+      {
+        path: "/writing/w2",
+        element: <W2/>
       }
-      
     ]
   }
 ])
