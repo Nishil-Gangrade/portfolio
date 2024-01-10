@@ -26,7 +26,7 @@ export default function Home() {
         Aditya Muzumdar
       </p>
       <p className='mt-2 text-base'>
-      I learn. I think. I create.
+      {text}
       </p>
     </div>
   );
