@@ -3,17 +3,11 @@ import React from 'react'
 function W1() {
   return (
     <div class="mx-auto max-w-2xl pb-12 font-serif">
-    <h1 class="font-bold text-3xl mb-1">The Dichotomy of Mumbai</h1>
-    <h3 class="text-gray-600">24th August, 2023</h3>
+    <h1 class="font-bold text-3xl mb-1">One must imagine Sisyphus HAPPY</h1>
+    <h3 class="text-gray-600">13th Feb, 2024</h3>
     <p class="mt-4 leading-7">
-        The other day I got to visit Mumbai with my friends. Mumbai has always been close to my heart. A lot of my childhood memories come from this place. When I stood in front of the Taj, it reminded me of the time when my nana held me in his arms and told me that the tea inside is very expensive. And now I was standing there telling my friends that the tea inside is really expensive, not really knowing how expensive the tea really is. Not much has changed, I guess. But this time around Mumbai made me think. Think a lot, actually. Standing next to the Gateway of India, with pigeons flying around, pleasing sea breeze, I had made up my mind that this is the gateway to the city of dreams. Just then a woman with a small baby in her hands came to me and asked for some money, saying she hasn’t eaten for a day. I wondered if she thinks of Mumbai as the city of dreams. I highly doubt. Wandering around the streets of Mumbai with picturesque British architecture, buildings that could not get any more aesthetic, I saw huge fancy cafes with people drinking their cup of CAFFE MOCHA one sip every few minutes. They seem to have all the time in the world. Just a head twist and I could see people running, trying to get their work done. I saw people trying to get inside jam-packed locals, fighting for even an inch. I saw young men, probably in their 20’s giving money to 60-year-old coolies asking them to carry their luggage. All of this made me think of Mumbai as the city of nightmares.
-    </p> 
-    <p class="mt-4 leading-7">
-        It made me wonder, is Mumbai truly the city of dreams or the city of nightmares? Amidst the gleaming skyscrapers and the bustling streets, there's a stark contrast, a duality that defines this city. It's a place where dreams take flight, where ambitions soar high above the skyline, yet it's also a place where realities hit hard, where dreams often shatter against the harsh walls of inequality and struggle.
-    </p>
-    <p class="mt-4 leading-7 my-5">
-        Maybe, just maybe, Mumbai isn't just one or the other. Perhaps it's a canvas where dreams and nightmares coexist, where the pursuit of success and the fight against adversity create a unique rhythm that defines this metropolis. And amidst all these contradictions, it remains a city that never ceases to amaze, never fails to inspire, and never stops teaching lessons about life in its most raw and unfiltered form.
-    </p>
+    “Do you think Sisyphus was Happy?” asked a friend of mine. I replied saying “who is sisyphus?”.  Sisyphus, as explained by my friend is a part of Greek mythology. He was the king of Ephyra who was punished by the gods for his greed and craftiness by being forced to push an enormous boulder up a hill. Sisyphus had to spend the rest of his life pushing a boulder up a hill. Why would he be happy? He’ll have to spend the rest of his life doing the same thing again and again. Then it hit me. Most of us are sisyphus in real lives. We will spend the rest of our lives doing the same job, following the same routine for the rest of our lives. We will spend the rest of our life being a cog in a machine. Most of us won’t do something extraordinary in our lives, most of us won’t create a cure to cancer, we will not go to space, or we not build a multinational company.  Will we not be happy. What’s the point then? These are the questions that existentialists asks themselves and go down a loop hole of sadness. 	And honestly most of us think about things like these at some points of life. But what makes me evade all these questions is by imagining sisyphus happy. This idea was presented by the philosopher Albert Camus. If all of us sisyphus’s imagine having fun doing all the mundane and repetitive things in life, our lives will become a lot more bearable, a lot more livable, a lot more happier.     </p> 
+    <p/>
 </div>
 
   )

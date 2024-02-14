@@ -9,8 +9,9 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import W1 from './Components/Writing/W1';
 import W2 from './Components/Writing/W2';
-
+import W3 from './Components/Writing/W3';
 import About from './Components/About';
+
 const router=createBrowserRouter([
   {
     path: '/',
@@ -45,6 +46,10 @@ const router=createBrowserRouter([
       {
         path: "/writing/w2",
         element: <W2/>
+      },
+      {
+        path: "/writing/w3",
+        element: <W3/>
       }
     ]
   }
