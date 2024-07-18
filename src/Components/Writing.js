@@ -18,7 +18,7 @@ export default function Writing() {
                     <Link to="/writing/w2" className="grid grid-cols-2 gap-4" >
                         <span className="text-black/50">2023-12-25</span>
                         <div className="flex flex-col">
-                            <span className="text-black">It’s all good man.</span>
+                            <span className="text-black">It's all good man.</span>
                             <p className="mt-2 font-serif text-black/70 text-base">Writing about Better call Saul and Breaking Bad</p>
                         </div>
                     </Link>
