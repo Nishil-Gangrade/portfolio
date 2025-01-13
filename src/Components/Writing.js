@@ -6,6 +6,15 @@ export default function Writing() {
             <h1 className="font-semibold text-2xl mb-4">Writing</h1>
             <div>
                 <section className='py-5'>
+                    <Link to="/writing/w4" className="grid grid-cols-2 gap-4" >
+                        <span className="text-black/50">2025-01-13</span>
+                        <div className="flex flex-col">
+                            <span className="text-black">Top of the world</span>
+                            <p className="mt-2 font-serif text-black/70 text-base">Random</p>
+                        </div>
+                    </Link>
+                </section>
+                <section className='py-5'>
                     <Link to="/writing/w3" className="grid grid-cols-2 gap-4" >
                         <span className="text-black/50">2024-02-13</span>
                         <div className="flex flex-col">
