@@ -11,6 +11,7 @@ import W1 from './Components/Writing/W1';
 import W2 from './Components/Writing/W2';
 import W3 from './Components/Writing/W3';
 import W4 from './Components/Writing/W4';
+import W5 from './Components/Writing/W5';
 import About from './Components/About';
 
 const router=createBrowserRouter([
@@ -55,6 +56,10 @@ const router=createBrowserRouter([
       {
         path: "/writing/w4",
         element: <W4/>
+      },
+      {
+        path: "/writing/w5",
+        element: <W5/>
       }
     ]
   }
