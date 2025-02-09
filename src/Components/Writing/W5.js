@@ -1,6 +1,6 @@
 import React from 'react'
 
-function W4() {
+function W5() {
   return (
     <div class="mx-auto max-w-2xl pb-12 font-serif">
         <h1 class="font-bold text-3xl mb-1">On Alcohol</h1>
@@ -12,4 +12,4 @@ function W4() {
   )
 }
 
-export default W4
+export default W5
