@@ -5,6 +5,15 @@ export default function Writing() {
         <div>
             <h1 className="font-semibold text-2xl mb-4">Writing</h1>
             <div>
+                <section className='py-5'>
+                    <Link to="/writing/w7" className="grid grid-cols-2 gap-4" >
+                        <span className="text-black/50">2025-09-06</span>
+                        <div className="flex flex-col">
+                            <span className="text-black">Interstellar</span>
+                            <p className="mt-2 font-serif text-black/70 text-base">My favourite film</p>
+                        </div>
+                    </Link>
+                </section>
             <section className='py-5'>
                     <Link to="/writing/w6" className="grid grid-cols-2 gap-4" >
                         <span className="text-black/50">2025-04-26</span>
@@ -59,7 +68,6 @@ export default function Writing() {
                         </div>
                     </Link>
                 </section>
-                
             </div>
         </div>
     );
