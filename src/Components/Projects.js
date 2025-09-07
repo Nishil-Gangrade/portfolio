@@ -22,7 +22,7 @@ const projects = [
     github: "https://github.com/Nishil-Gangrade/Buzzin",
     website: "https://buzzin-4hx4.onrender.com/", 
   },
-   {
+  {
     title: "Tomato",
     subtitle: "MERN | Stripe | JWT | Role-based",
     description:
@@ -41,7 +41,7 @@ function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition"
+            className="bg-white shadow-md rounded-2xl p-4 transition-transform duration-300 hover:scale-95 hover:shadow-xl"
           >
             {/* Project Image */}
             <img

@@ -9,7 +9,7 @@ export default function Home() {
 
   const taglines = [
     "I learn. I build. I ship.",
-    "I design. I develop. I deliver.",
+    "I design.I develop.I deliver.",
     "I explore. I solve. I create.",
   ];
 

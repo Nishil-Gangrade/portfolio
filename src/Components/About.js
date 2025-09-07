@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div className=''>
       <h1 className="font-semibold text-4xl">Hey, I'm Nishil</h1> 
-      <span className="font-semibold text-2xl">Code. Data. Insight. Impact</span>
+      {/* <span className="font-semibold text-2xl">Code. Data. Insight. Impact</span> */}
       
       <p className="text-lg my-5">
         I’m a Computer Science student at VIT Vellore (2022–2026) with strong foundations in 

@@ -1,42 +1,37 @@
-import React from 'react'
-import { Link} from 'react-router-dom';
+// show user: 22bce0119
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-    return (
-        <header className="pt-5 pb-16 px-4 flex justify-center">
-            <nav className='flex gap-4'>
-            <Link
-                            to="/"
-                            className="text-base font-semibold"
-                        >
-                            am
-            </Link>
-            <Link
-                            to="/about"
-                            className="text-base font-semibold"
-                        >
-                            about
-            </Link>
-            <Link
-                            to="/projects"
-                            className="text-base font-semibold"
-                        >
-                            projects
-            </Link>
-            <Link
-                            to="/writing"
-                            className=" text-base font-semibold"
-                        >
-                            experience
-            </Link>
+  const linkClass =
+    "text-base font-semibold relative group transition-colors duration-200 hover:text-gray-600";
 
-                        
-            
-            </nav>
-        </header>
-    );
+  const underlineClass =
+    "absolute left-0 -bottom-1 h-0.5 bg-gray-600 transition-all duration-300";
+
+  return (
+    <header className="pt-5 pb-16 px-4 flex justify-center">
+      <nav className="flex gap-6">
+        <Link to="/" className={linkClass}>
+          am
+          <span className={`${underlineClass} w-0 group-hover:w-full`} />
+        </Link>
+
+        <Link to="/about" className={linkClass}>
+          about
+          <span className={`${underlineClass} w-0 group-hover:w-full`} />
+        </Link>
+
+        <Link to="/projects" className={linkClass}>
+          projects
+          <span className={`${underlineClass} w-0 group-hover:w-full`} />
+        </Link>
+
+        <Link to="/writing" className={linkClass}>
+          experience
+          <span className={`${underlineClass} w-0 group-hover:w-full`} />
+        </Link>
+      </nav>
+    </header>
+  );
 }
-
-
-
-
