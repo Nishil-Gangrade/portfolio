@@ -1,85 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import Home from './Components/Home';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Layout from './Components/Layout';
-import Writing from './Components/Writing';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
-import W1 from './Components/Writing/W1';
-import W2 from './Components/Writing/W2';
-import W3 from './Components/Writing/W3';
-import W4 from './Components/Writing/W4';
-import W5 from './Components/Writing/W5';
-import W6 from './Components/Writing/W6';
-import W7 from './Components/Writing/W7';
-import About from './Components/About';
+// show user: 22bce0119
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Home from "./Components/Home";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Layout from "./Components/Layout";
+import Projects from "./Components/Projects";
+import writing from "./Components/Writing";
+import About from "./Components/About";
+import Experience from "./Components/Writing";
 
-const router=createBrowserRouter([
+const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Layout/>,
+    path: "/",
+    element: <Layout />,
     children: [
-      {
-        path: "",
-        element: <Home/>
-      },
-      {
-        path: "/writing",
-        element: <Writing/>,
-        
-      },
-      {
-        path: "/about",
-        element: <About/>,
-        
-      },
-      {
-        path: "/projects",
-        element: <Projects/>
-      },
-      {
-        path: "/contact",
-        element: <Contact/>
-      },
-      {
-        path: "/writing/w1",
-        element: <W1/>
-      },
-      {
-        path: "/writing/w2",
-        element: <W2/>
-      },
-      {
-        path: "/writing/w3",
-        element: <W3/>
-      },
-      {
-        path: "/writing/w4",
-        element: <W4/>
-      },
-      {
-        path: "/writing/w5",
-        element: <W5/>
-      },
-      {
-        path: "/writing/w6",
-        element: <W6/>
-      },
-      {
-        path: "/writing/w7",
-        element: <W7/>
-      }
-    ]
-  }
-])
+      { path: "", element: <Home /> },
+      { path: "about", element: <About /> },
+      { path: "projects", element: <Projects /> },
+      { path: "writing", element: <Experience /> },
+      // removed the old /writing routes as requested
+    ],
+  },
+]);
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
-

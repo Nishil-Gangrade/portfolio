@@ -1,75 +1,77 @@
-import React from 'react'
-import { Link} from 'react-router-dom';
-export default function Writing() {
-    return (
-        <div>
-            <h1 className="font-semibold text-2xl mb-4">Writing</h1>
-            <div>
-                <section className='py-5'>
-                    <Link to="/writing/w7" className="grid grid-cols-2 gap-4" >
-                        <span className="text-black/50">2025-09-06</span>
-                        <div className="flex flex-col">
-                            <span className="text-black">Interstellar</span>
-                            <p className="mt-2 font-serif text-black/70 text-base">My favourite film</p>
-                        </div>
-                    </Link>
-                </section>
-            <section className='py-5'>
-                    <Link to="/writing/w6" className="grid grid-cols-2 gap-4" >
-                        <span className="text-black/50">2025-04-26</span>
-                        <div className="flex flex-col">
-                            <span className="text-black">When the race ends</span>
-                            <p className="mt-2 font-serif text-black/70 text-base">Pondering</p>
-                        </div>
-                    </Link>
-                </section>
-                <section className='py-5'>
-                    <Link to="/writing/w5" className="grid grid-cols-2 gap-4" >
-                        <span className="text-black/50">2025-01-20</span>
-                        <div className="flex flex-col">
-                            <span className="text-black">On Alcohol</span>
-                            <p className="mt-2 font-serif text-black/70 text-base">Pondering</p>
-                        </div>
-                    </Link>
-                </section>
-                <section className='py-5'>
-                    <Link to="/writing/w4" className="grid grid-cols-2 gap-4" >
-                        <span className="text-black/50">2025-01-13</span>
-                        <div className="flex flex-col">
-                            <span className="text-black">Top of the world</span>
-                            <p className="mt-2 font-serif text-black/70 text-base">Pondering</p>
-                        </div>
-                    </Link>
-                </section>
-                <section className='py-5'>
-                    <Link to="/writing/w3" className="grid grid-cols-2 gap-4" >
-                        <span className="text-black/50">2024-02-13</span>
-                        <div className="flex flex-col">
-                            <span className="text-black">One must imagine Sisyphus HAPPY</span>
-                            <p className="mt-2 font-serif text-black/70 text-base">Writing about Albert Camus Philosophy</p>
-                        </div>
-                    </Link>
-                </section>
-                <section className='py-5'>
-                    <Link to="/writing/w2" className="grid grid-cols-2 gap-4" >
-                        <span className="text-black/50">2023-12-25</span>
-                        <div className="flex flex-col">
-                            <span className="text-black">It's all good man.</span>
-                            <p className="mt-2 font-serif text-black/70 text-base">Writing about Better call Saul and Breaking Bad</p>
-                        </div>
-                    </Link>
-                </section>
-                <section className='py-5'>
-                    <Link to="/writing/w1" className="grid grid-cols-2 gap-4" >
-                        <span className="text-black/50">2023-08-24</span>
-                        <div className="flex flex-col">
-                            <span className="text-black">The Dichotomy of Mumbai</span>
-                            <p className="mt-2 font-serif text-black/70 text-base">Writing about the city I love : Mumbai</p>
-                        </div>
-                    </Link>
-                </section>
-            </div>
-        </div>
-    );
-}
+// show user: 22bce0119
+import React from "react";
+import { FaBriefcase } from "react-icons/fa";
 
+export default function Experience() {
+  const experiences = [
+    {
+      company: "DDXP Technologies Pvt. Ltd.",
+      role: "Data Analytics Intern",
+      period: "May 2025 – July 2025",
+      location: "Remote",
+      bullets: [
+        "Handled real-time datasets using Excel, SQL, and Python (Pandas, NumPy).",
+        "Restructured raw business data into actionable formats for reporting and dashboards.",
+        "Built interactive Power BI dashboards to visualize KPIs and trends.",
+      ],
+    },
+    {
+      company: "Cygnus Capital",
+      role: "Software Developer Intern",
+      period: "May 2024 – July 2024",
+      location: "Hybid-Indore",
+      bullets: [
+        "Developed responsive frontend modules for OPRATE using React, TypeScript & Tailwind.",
+        "Optimized component structure, achieving ~20% faster load times.",
+        "Integrated trading workflows with improved UX consistency.",
+      ],
+    },
+  ];
+
+  return (
+    <div>
+      <div className="flex items-center gap-3 mb-6">
+        <FaBriefcase className="text-2xl text-gray-700" />
+        <h1 className="font-semibold text-2xl">Experience</h1>
+      </div>
+
+      <div className="space-y-4">
+        {experiences.map((exp, i) => (
+          <article
+            key={i}
+            className="bg-white border rounded-2xl p-4 md:p-5 shadow-sm hover:shadow-md transition"
+            aria-labelledby={`exp-${i}`}
+          >
+            {/* Top row: name + period (responsive) */}
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+              <div>
+                <h2 id={`exp-${i}`} className="text-lg font-semibold leading-tight">
+                  {exp.company}
+                </h2>
+                <p className="text-sm text-gray-600 mt-1">
+                  <span className="font-medium">{exp.role}</span>
+                  <span className="hidden sm:inline"> • </span>
+                  <span className="italic text-sm text-gray-500"> {exp.location}</span>
+                </p>
+              </div>
+
+              {/* period */}
+              <div className="text-sm text-gray-500 md:text-right">
+                <span className="inline-block md:block">{exp.period}</span>
+              </div>
+            </div>
+
+            {/* bullets */}
+            <ul className="mt-3 md:mt-4 list-disc list-inside text-gray-700 space-y-2 text-sm">
+              {exp.bullets.map((b, idx) => (
+                <li key={idx} className="leading-snug">
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}

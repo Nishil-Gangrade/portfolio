@@ -1,32 +1,49 @@
-import React, { useState, useEffect } from 'react';
+// show user: 22bce0119
+import React, { useState, useEffect } from "react";
 
 export default function Home() {
-  const [text, setText] = useState('');
-  const fullText = "I learn. I think. I create.";
-  const typingSpeed = 50; // Adjust typing speed (in milliseconds)
-  
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(120);
+
+  const taglines = [
+    "I learn. I build. I ship.",
+    "I design. I develop. I deliver.",
+    "I explore. I solve. I create.",
+  ];
+
   useEffect(() => {
-    let currentIndex = 0;
+    const handleType = () => {
+      const current = loopNum % taglines.length;
+      const fullText = taglines[current];
 
-    const interval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(interval);
+      setText(
+        isDeleting
+          ? fullText.substring(0, text.length - 1)
+          : fullText.substring(0, text.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 60 : 120);
+
+      if (!isDeleting && text === fullText) {
+        setTimeout(() => setIsDeleting(true), 1000);
+      } else if (isDeleting && text === "") {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
       }
-    }, typingSpeed);
+    };
 
-    return () => clearInterval(interval);
-  }, [fullText]);
+    const timer = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, typingSpeed, loopNum]);
 
   return (
-    <div className='max-h-screen flex justify-center items-center flex-col  ' style={{ marginTop: '140px' }}>
-      <p className='text-6xl font-bold'>
-        Aditya Muzumdar
-      </p>
-      <p className='mt-2 text-base'>
-      {text}
+    <div className="h-screen flex justify-center items-center flex-col text-center">
+      <p className="text-6xl font-bold">Nishil Gangrade</p>
+      <p className="mt-2 text-lg font-mono text-gray-700">
+        {text}
+        <span className="animate-pulse">|</span>
       </p>
     </div>
   );

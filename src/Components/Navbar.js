@@ -27,7 +27,7 @@ export default function Header() {
                             to="/writing"
                             className=" text-base font-semibold"
                         >
-                            writing
+                            experience
             </Link>
 
                         

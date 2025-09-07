@@ -1,46 +1,87 @@
-import React from 'react';
+// show user: 22bce0119
+import React from "react";
+import { DiGithubBadge } from "react-icons/di";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Text Editor",
-    subtitle: "Data Structures",
-    description: "This project is a text editor developed using the C programming language. It is built on the Doubly Linked List data structure, which enables efficient navigation within the editor. The project's user interface is created using the ncurses library. It includes features such as cut, copy, paste, find, navigation, and save.",
-    link: "https://github.com/adityamuzumdar/TEXT-EDITOR-USING-GAP-BUFFER",
-  },
-  
-  {
-    title: "Used Car Price Prediction",
-    subtitle: "Machine Learning",
-    description: "A machine learning project used car price prediction model made using Random Forest Regression. The model was trained on a dataset that included attributes such as kilometers driven, age of the car, and other relevant features. The goal was to accurately estimate the prices of used cars based on these factors.    ",
-    link: "https://github.com/adityamuzumdar/Used_car_price_prediction",
+    title: "Veero Ki Seva",
+    subtitle: "MERN | Razorpay | JWT | Cloudinary",
+    description:
+      "Role-based donation platform connecting donors with martyrs’ families. Features authentication, dashboards, and Razorpay integration.",
+    image: "/projects/veero.png", 
+    github: "https://github.com/Nishil-Gangrade/Veero-Ki-Seva",
+    website: "https://veero-ki-seva.vercel.app/", 
   },
   {
-    title: "Faster Chrome extension",
-    subtitle: "Chrome Extension",
-    description: "A chrome extension which helps to change the playback speed of any kind of media in chrome browser according to the needs of the user. Made using HTML, CSS, JavaScript.",
-    link: "https://github.com/adityamuzumdar/faster_chrome_ext",
+    title: "Buzzin",
+    subtitle: "MERN | Socket.IO | Gemini API",
+    description:
+      "Full-stack chat app with real-time messaging, typing indicators, AI-powered replies, and secure authentication.",
+    image: "/projects/buzzin.png", 
+    github: "https://github.com/Nishil-Gangrade/Buzzin",
+    website: "https://buzzin-4hx4.onrender.com/", 
   },
-  {
-    title: "Vim like editor",
-    subtitle: "Operating System",
-    description: "A feature-rich Unix-like shell in C, offering advanced functionalities such as redirection, pipes, history, and customizable settings. The shell should execute commands, manage I/O operations, provide command history recall, and allow for pipelining multiple commands. ",
-    link: "https://github.com/adityamuzumdar/Shell_in_C",
+   {
+    title: "Tomato",
+    subtitle: "MERN | Stripe | JWT | Role-based",
+    description:
+      "Food-ordering platform built with the MERN stack. Provides user and admin panels for ordering, product management, and order tracking.",
+    image: "/projects/tomato.png", 
+    github: "https://github.com/Nishil-Gangrade/Tomato-Food-Deliver-App.git",
+    website: "https://food-delivery-frontend-s2l9.onrender.com", 
   },
-  // Add more projects as needed
 ];
 
 function Projects() {
   return (
-    <div>
-      <h1 className="font-semibold text-2xl mb-5">Projects</h1>
-      {projects.map((project, index) => (
-        <div key={index} className="mb-4">
-          <h2 className="font-semibold text-lg mb-1">{project.title}</h2>
-          <h3 className="text-gray-600 mb-2">{project.subtitle}</h3>
-          <p>{project.description}</p>
-          <a className="text-blue-700" href={project.link}>Link</a>
-        </div>
-      ))}
+    <div className="mt-10">
+      <h1 className="font-semibold text-3xl mb-6">Projects</h1>
+      <div className="grid md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-2xl p-4 hover:shadow-xl transition"
+          >
+            {/* Project Image */}
+            <img
+              src={project.image}
+              alt={project.title}
+              className="rounded-xl mb-4 w-full h-48 object-cover"
+            />
+
+            {/* Title + Subtitle */}
+            <h2 className="font-semibold text-xl">{project.title}</h2>
+            <h3 className="text-gray-600 text-sm mb-2">{project.subtitle}</h3>
+
+            {/* Short description */}
+            <p className="text-gray-700 text-sm mb-4">{project.description}</p>
+
+            {/* Links */}
+            <div className="flex gap-4">
+              {/* GitHub link */}
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-gray-800 hover:text-black"
+              >
+                <DiGithubBadge className="text-2xl" /> GitHub
+              </a>
+
+              {/* Website link */}
+              <a
+                href={project.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-blue-600 hover:text-blue-800"
+              >
+                <FaExternalLinkAlt /> Live
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
