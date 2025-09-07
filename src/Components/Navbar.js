@@ -10,7 +10,7 @@ export default function Header() {
     "absolute left-0 -bottom-1 h-0.5 bg-gray-600 transition-all duration-300";
 
   return (
-    <header className="pt-5 pb-16 px-4 flex justify-center">
+    <header className="pt-5 pb-10 px-4 flex justify-center">
       <nav className="flex gap-6">
         <Link to="/" className={linkClass}>
           am
